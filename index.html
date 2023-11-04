@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+  scroll-behavior: smooth;
+}
+section:target{
+  padding-top:30px;/*evite de masquer les titres des ancres lors du smooth scroll */
+  margin-top:-30px;/*evite de masquer les titres des ancres lors du smooth scroll*/
+}
+#container{
+  text-align: justify;
+  font-family: Verdana,Helvetica,sans-serif;
+  color: #333333;
+  margin: 0 auto;
+  width: 95%;
+  padding: 10px;
+}
+body.dark, body.dark h1,body.dark h2,body.dark h3, body.dark p, .dark input, .dark textarea{
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.dark #contact-form input, .dark #contact-form textarea{
+  border: 2px solid #ffffff;
+}
+#dark-mode button{
+  border:none;
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+#dark-mode button:hover{
+  background-color: grey;
+  cursor: pointer;
+}
+
+.dark #container #dark-mode button{
+  background-color: #ffffff;
+  color: #333333;
+}
+.dark #container #dark-mode button:hover{
+  background-color: lightgrey;
+}
+#title{
+  margin-top: 65px;
+}
+#title h1{
+  font-size: 52px;
+  text-align:left;
+}
+h2{ 
+  font-size:27px;
+}
+#menu{
+  position: fixed;
+  top:12px; 
+  left:0px;
+}
+#menu ul{
+  display:flex;
+  margin:0;
+  padding-inline-start:0px;
+}
+#menu li {
+  list-style: none;
+  text-indent: 0;
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+#menu li a{
+  text-decoration: none;
+  padding:10px;
+  color: #333333;
+  font-weight: bold;
+  background-color: lightgreen;
+  border-right: 3px solid #ffffff;
+}
+#menu li.active a {
+  background-color: lightblue;
+}
+#menu li.hidden-link{
+  opacity: 0;
+}
+.dark #menu li a {
+  border-right-color: #333333;
+}
+#contact-form input{
+  height:20px;
+}
+#contact-form input,#contact-form button,#contact-form textarea{
+  display: block;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 2px solid #333333;
+  border-radius: 4px;
+}
+button#send-btn {
+  padding: 10px 40px;
+  margin-left: 168px;;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333333;
+  background-color: lightgreen;
+  border: 0px none transparent;
+  border-radius:15px;
+}
+button#send-btn:hover, #go-to-top:hover,#menu li a:hover{
+  background-color: #76c294;
+}
+hr{
+  height: 15px;
+  background-color: lightgreen;
+  border: 0 none;
+}
+footer p{
+  margin-bottom: 10px;
+}
+@media screen and (min-width:750px){
+  #container{
+    width: 750px;
+  }
+  #menu{
+    margin: 0 59%;
+  }
+  #dark-mode{
+  width: 750px;
+  text-align: right;
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="dark-mode"><button><span>Light Mode</span></button></div>
+      <header id="title"><h1>Single Page Website</h1></header>
+      <nav id="menu">
+          <ul>
+            <li class="hidden-link active"><a href="#container">Top</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#some-content">Content</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+      </nav>
+        <hr></hr>
+      <section id="about">
+        <article>
+          <h2>About</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+            <p>Consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+          <p>Consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+          <p>Consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+          <p>Consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+        </article>
+      <section>
+      <hr></hr>
+      <section id="some-content">
+        <article>
+          <h2>Some content</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+            <p>Consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+          <p>Consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+          <p>Consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+          <p>Consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Sit amet, consectetur adipiscing elit. Praesent ultrices, mauris id pharetra posuere, massa mi consequat odio, sed vehicula dui dolor ut augue. Praesent nulla purus, elementum non orci vitae, placerat iaculis magna. Duis consectetur convallis massa, id fermentum felis semper vel. In porttitor posuere magna a pharetra.</p>
+        </article>
+      <section>
+      <hr></hr>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          <form id="contact-form" method="post" action="">
+            <input type="text" placeholder="Name"/>
+            <input type="email" placeholder="Email"/>
+            <input type="tel" placeholder="Tel"/>
+            <textarea rows="8" cols="33" placeholder="Message"></textarea>
+            <button id="send-btn" disabled="true">Send</button>
+          </form>
+        </p>
+      </section>
+      <hr></hr>
+      
+      <footer>
+        <p><span>A pen by Amandine B.</span></p>
+        
+      </footer>
+      </div>
+      <script>
+        $('body').addClass('dark');
+$('#menu li:first-child').addClass('active');
+$('#dark-mode').click(function(){
+  if ($('body').hasClass('dark')){
+    $('body').removeClass('dark');
+    $('#dark-mode span').html('Dark Mode');
+  }
+  else{
+    $('body').addClass('dark');
+    $('#dark-mode span').html('Light Mode');
+  }
+});
+var previous = null;
+$('#menu li').click(function(){
+  previous.removeClass('active');
+  $(this).addClass('active');
+  previous = $(this);
+});
+/**
+ * inViewport jQuery plugin by Roko C.B.
+ * http://stackoverflow.com/a/26831113/383904
+ * Returns a callback function with an argument holding
+ * the current amount of px an element is visible in viewport
+ * (The min returned value is 0 (element outside of viewport)
+ */
+;(function($, win) {
+  $.fn.inViewport = function(cb) {
+     return this.each(function(i,el) {
+       function visPx(){
+         var elH = $(el).outerHeight(),
+             H = $(win).height(),
+             r = el.getBoundingClientRect(), t=r.top, b=r.bottom;
+         return cb.call(el, Math.max(0, t>0? Math.min(elH, H-t) : (b<H?b:H)));  
+       }
+       visPx();
+       $(win).on("resize scroll", visPx);
+     });
+  };
+}(jQuery, window));
+
+
+  
+$('#container,#about,#some-content,#contact').inViewport(function(px)  {
+  console.log( px ); // `px` represents the amount of visible height
+  
+  if(px){
+    // do this if element enters the viewport // px > 0
+    var identifiant = $(this).attr('id');
+    $( "#menu li a" ).each(function() {
+      if($(this).attr('href').replace('#','') === identifiant){
+        $(this).parent().addClass('active');
+        if(previous) previous.removeClass('active');
+        previous=$(this).parent();
+      }
+   })
+  }else{
+    // do that if element exits  the viewport // px = 0
+   
+  }
+}); // Here you can chain other jQuery methods to your selector
+
+
+$('#title').inViewport(function(px)  {
+  console.log( px ); // `px` represents the amount of visible height
+  
+  if(px){
+    // do this if element enters the viewport // px > 0
+    $('#menu li:first-child').addClass('hidden-link');
+  }else{
+    // do that if element exits  the viewport // px = 0
+   $('#menu li:first-child').removeClass('hidden-link');
+  }
+}); // Here you can chain other jQuery methods to your selector
+      </script>
+</body>
+</html>
